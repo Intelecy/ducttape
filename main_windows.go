@@ -28,7 +28,7 @@ func registerAction(c *cli.Context) error {
 
 	logInfo(`setting 'HKCU\%s\SignTool Path' to %s`, regkey, ex)
 
-	k, err := registry.OpenKey(registry.CURRENT_USER, regkey, registry.SET_VALUE)
+	k, _, err := registry.CreateKey(registry.CURRENT_USER, regkey, registry.ALL_ACCESS)
 	if err != nil {
 		return err
 	}
