@@ -309,7 +309,7 @@ func logError(format string, a ...interface{}) {
 	if zlog != nil {
 		zlog.Error(censor(format, a...))
 	} else {
-		_, _ = fmt.Fprint(os.Stderr, censor(format, a...))
+		_, _ = fmt.Fprint(os.Stdout, censor(format, a...))
 	}
 }
 
@@ -333,7 +333,7 @@ func initLogging(c *cli.Context) error {
 		return err
 	}
 
-	cfg.OutputPaths = []string{"stderr", fpath}
+	cfg.OutputPaths = []string{"stdout", fpath}
 
 	logger, err := cfg.Build()
 	if err != nil {
