@@ -101,6 +101,10 @@ func main() {
 					return nil
 				},
 				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  "a",
+						Usage: "Select the best signing cert automatically. Note: ignored by this tool.",
+					},
 					&cli.StringFlag{
 						Name:     "sha1",
 						Usage:    "Specify the SHA1 thumbprint of the signing cert.",
