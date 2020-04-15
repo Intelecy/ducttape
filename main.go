@@ -108,7 +108,7 @@ func main() {
 					&cli.StringFlag{
 						Name:     "sha1",
 						Usage:    "Specify the SHA1 thumbprint of the signing cert.",
-						Required: true,
+						Required: false,
 						EnvVars:  []string{"DUCTTAPE_SIGN_SHA1"},
 					},
 					&cli.StringFlag{
