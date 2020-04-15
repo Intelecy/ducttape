@@ -1,0 +1,16 @@
+{
+	"FixedFileInfo": {
+		"FileVersion": {
+			"Major": 42
+		},
+		"ProductVersion": {
+			"Major": 42
+		}
+	},
+	"StringFileInfo": {
+		"FileDescription": "ducttape fixes everything",
+		"FileVersion": "v42.0.0.0",
+		"ProductName": "ducttape",
+		"ProductVersion": "v42.0.0.0"
+	}
+}
