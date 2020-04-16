@@ -10,9 +10,9 @@ the keys to the local system for use by `signtool.exe`. @vcsjones's
 the Key Vault API to sign the hashes rather than a local certificate.
 
 Advanced Installer allows you to configure an alternate to Microsoft's `signtool.exe`. Ideally we would simply replace
-`signtool.exe` with `azsigntool.exe` and go on merry way (as merry as one can be while doing Windows development), but
-`azsigntool.exe` requires quite a few additional parameters. Since Advanced Installer's invocation of the sign tool is
-limited to a few hardcoded parameters, there isn't an easy way tell `azsigntool.exe` how it should work.
+`signtool.exe` with `azsigntool.exe` and go on our merry way (as merry as one can be while doing Windows development),
+but `azsigntool.exe` requires quite a few additional parameters. Since Advanced Installer's invocation of the sign tool
+is limited to a few hardcoded parameters, there isn't an easy way tell `azsigntool.exe` how it should work.
 
 `ducttape.exe` "bridges" the various bits in a "messy but it works" way. `ducttape.exe` reads CLI parameters from its
 invocation by Advanced Installer, and adds in parameters read from environmental variables. Once it has all the required
@@ -22,6 +22,14 @@ miss-configured pipeline.
 Licensed under MIT
 
 https://intelecy.com
+
+## Requirements
+
+Windows 10 or Windows Server 2016+ is required.
+
+## Limitations
+
+Not all CLI argument combinations tested or supported.
 
 ## Example `pipeline.yml` fragment:
 
