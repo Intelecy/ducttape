@@ -89,7 +89,7 @@ stages:
               DUCTTAPE_SIGN_TIMESTAMP_URL_RFC3161: http://timestamp.globalsign.com/scripts/timestamp.dll
               DUCTTAPE_SIGN_AZ_KEY_VAULT_URL:  https://my-vault-name.vault.azure.net
               DUCTTAPE_SIGN_AZ_KEY_VAULT_CERT: my-cert-name
-              DUCTTAPE_SIGN_AZ_KEY_VAULT_CLIENT_ID: 8e05964a-2042-4ebc-9ce3-23969af77266
+              DUCTTAPE_SIGN_AZ_KEY_VAULT_CLIENT_ID: 00000000-0000-0000-0000-000000000000
               DUCTTAPE_SIGN_AZ_KEY_VAULT_CLIENT_SECRET: "****"
 
           # export ducttape logs
