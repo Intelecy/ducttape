@@ -184,6 +184,12 @@ func main() {
 						Usage:    "An access token used to authenticate to Azure. This can be used instead of the '--azure-key-vault-client-id' and '--azure-key-vault-client-secret' options. This is useful if AzureSignTool is being used as part of another program that is already authenticated and has an access token to Azure.",
 						EnvVars:  []string{"DUCTTAPE_SIGN_AZ_KEY_VAULT_ACCESS_TOKEN"},
 					},
+					&cli.BoolFlag{
+						Name:    "azure-key-vault-managed-identity",
+						Aliases: []string{"kvm"},
+						Usage:   "Use managed identity to authenticate to Azure. This can be used instead of the '--azure-key-vault-client-id' or '--azure-key-vault-accesstoken' options.",
+						EnvVars: []string{"DUCTTAPE_SIGN_AZ_KEY_VAULT_MANAGED_IDENTITY"},
+					},
 				},
 				Action: func(c *cli.Context) error {
 					var err error
@@ -235,6 +241,9 @@ func main() {
 					args = appendIfSet(c, args, "kvi")
 					args = appendIfSet(c, args, "kva")
 					args = appendIfSet(c, args, "kvs")
+					if c.Bool("kvm") {
+						args = append(args, "-kvm")
+					}
 					args = appendIfSet(c, args, "d")
 
 					if c.IsSet("tr") {
