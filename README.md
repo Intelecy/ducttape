@@ -183,6 +183,7 @@ OPTIONS:
    --azure-key-vault-client-secret value, --kvs value  This is the client secret used to authenticate to Azure, which will be used to generate an access token. This parameter is not required if an access token is supplied directly with the '--azure-key-vault-accesstoken' option. If this parameter is supplied, '--azure-key-vault-client-id' must be supplied as well. [$DUCTTAPE_SIGN_AZ_KEY_VAULT_CLIENT_SECRET]
    --azure-key-vault-certificate value, --kvc value    The name of the certificate used to perform the signing operation. [$DUCTTAPE_SIGN_AZ_KEY_VAULT_CERT]
    --azure-key-vault-accesstoken value, --kva value    An access token used to authenticate to Azure. This can be used instead of the '--azure-key-vault-client-id' and '--azure-key-vault-client-secret' options. This is useful if AzureSignTool is being used as part of another program that is already authenticated and has an access token to Azure. [$DUCTTAPE_SIGN_AZ_KEY_VAULT_ACCESS_TOKEN]
+   --azure-key-vault-managed-identity, --kvm           Use managed identity to authenticate to Azure. This can be used instead of the '--azure-key-vault-client-id' or '--azure-key-vault-accesstoken' options.
    -h, -?                                              show help (default: false)
 
 ```
