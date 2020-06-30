@@ -187,7 +187,7 @@ func main() {
 					&cli.BoolFlag{
 						Name:    "azure-key-vault-managed-identity",
 						Aliases: []string{"kvm"},
-						Usage:   "Use managed identity to authenticate to Azure. This can be used instead of the '--azure-key-vault-client-id' or '--azure-key-vault-accesstoken' options.",
+						Usage:   "Use managed identity to authenticate to Azure. This can be used instead of the '--azure-key-vault-client-id' or '--azure-key-vault-accesstoken' options. Requires a build of AzureSignTool from at least commit [vcsjones/AzureSignTool@0282752]",
 						EnvVars: []string{"DUCTTAPE_SIGN_AZ_KEY_VAULT_MANAGED_IDENTITY"},
 					},
 				},
