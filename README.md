@@ -169,6 +169,7 @@ USAGE:
 
 OPTIONS:
    -a                                                  Select the best signing cert automatically. Note: ignored by this tool. (default: false)
+   -as                                                 Append signature. Note: ignored by this tool. (default: false)
    --sha1 value                                        Specify the SHA1 thumbprint of the signing cert. [$DUCTTAPE_SIGN_SHA1]
    --fd value                                          Specifies the file digest algorithm to use for creating file signatures. (default: "SHA1") [$DUCTTAPE_SIGN_FILE_DIGEST]
    -s value                                            Specify the Store to open when searching for the cert. (default: "MY") [$DUCTTAPE_SIGN_STORE]
